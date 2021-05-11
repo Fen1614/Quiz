@@ -10,5 +10,13 @@ namespace Quiz {
         protected void Page_Load(object sender, EventArgs e) {
 
         }
+
+        protected void Button_Click(object sender, EventArgs e)
+        {
+            Session["ID"]=tb_ID.Text;
+            Session["Name"]=tb_Name.Text;
+            Response.Redirect("Quiz20210511_1.aspx",false);
+            HttpContext.Current.ApplicationInstance.CompleteRequest();
+        }
     }
 }
